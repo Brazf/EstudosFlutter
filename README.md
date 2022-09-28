@@ -1,2 +1,2 @@
-# EstudosFuttler
- Estudos do curso de Futtler.
+# EstudosFluttler
+ Estudos do curso de Fluttler.
