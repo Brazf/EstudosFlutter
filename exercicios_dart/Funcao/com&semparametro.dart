@@ -15,19 +15,19 @@ main() {
   retornoSemParamento();
 }
 
-void somarNumeros (String a, String b){
+void somarNumeros(String a, String b) {
   print(a + b);
 }
+
 /* PODE IMPRIMIR E USAR RETURN EM UMA MESMA FUNÇÃO (ASSIM ELA FUNIONA DE DOIS JEITO, MAS NÃO SEI SE É O INDICADO)*/
-String somarNumeros2 (String a, String b) {
-  return a+" "+b;
+String somarNumeros2(String a, String b) {
+  return a + " " + b;
 }
 
-void retornoSemParamento () {
+void retornoSemParamento() {
   int a = Random().nextInt(15);
   int b = Random().nextInt(15);
   print(a);
   print(b);
-  print("Resultado= ${a+b}");
+  print("Resultado= ${a + b}");
 }
-
