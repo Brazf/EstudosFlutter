@@ -13,7 +13,7 @@ class Construirapp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(title: const Text('Title: AppBar')),
         /* TEXT = WIDGET VISÍVEL DE TEXTO
-        body: const Text('Fábio Braz Ferreira'),
+        body: Text('Fábio Braz Ferreira'),
         */
         body: Column(
           children: const [
