@@ -1,20 +1,27 @@
 import 'package:flutter/material.dart';
 
 main() {
-  runApp(const PerguntaApp());
+  runApp(const Construirapp());
 }
 
-class PerguntaApp extends StatelessWidget {
-  const PerguntaApp({super.key});
+class Construirapp extends StatelessWidget {
+  const Construirapp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Perguntas'),
-        ),
+        appBar: AppBar(title: const Text('Title: AppBar')),
+        /* TEXT = WIDGET VISÍVEL DE TEXTO
         body: const Text('Fábio Braz Ferreira'),
+        */
+        body: Column(
+          children: const [
+            Text('children of column'),
+            Text('children of column'),
+            Text('children of column'),
+          ],
+        ),
       ),
     );
   }
