@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter com erro de conexão'),
+      home: const MyHomePage(title: 'App IFPE'),
     );
   }
 }
