@@ -14,43 +14,60 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),
-      home: Stack(
-        alignment: AlignmentDirectional.center,
+      home: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Center(
-            child :
-            Container(
-              color: Colors.green,
-              width: 100.0,
-              height: 100.0,
-            )
+          Stack(
+            alignment: AlignmentDirectional.center,
+            children: [
+              Container(
+                color: Colors.green,
+                width: 100.0,
+                height: 100.0,
+              ),
+              Container(
+                color: Colors.white,
+                width: 50.0,
+                height: 50.0,
+              ),
+            ],
           ),
-          Container(
-              color: Colors.white,
+          Stack(
+            alignment: AlignmentDirectional.center,
+            children: [
+              Container(
+                color: Colors.white,
+                width: 100.0,
+                height: 100.0,
+              ),
+              Container(
+                color: Colors.green,
+                width: 50.0,
+                height: 50.0,
+              ),
+            ],
           ),
-          Container(
-            color: Colors.black,
-            width: 300.0,
-            height: 300.0
-          ),
-          Container(
-            color: Colors.red,
-            width: 150.0,
-            height: 150.0,
-          ),
-          Container(
-            color: Colors.blue,
-            width: 75.0,
-            height: 75.0,
-          ),
-          Container(
-            color: Colors.yellow,
-            width: 37.0,
-            height: 37.0,
-            child: const Text('Centro',
-              style: TextStyle( fontSize: 8.0),
-              textAlign: TextAlign.center
-            ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Container(
+                color: Colors.blue,
+                width: 100.0,
+                height: 50.0,
+              ),
+              Container(
+                color: Colors.green,
+                width: 100.0,
+                height: 50.0,
+              ),
+              Container(
+                color: Colors.red,
+                width: 100.0,
+                height: 50.0,
+              ),
+            ],
           ),
         ],
       ),
