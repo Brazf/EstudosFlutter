@@ -14,62 +14,51 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),
-      home: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Stack(
-            alignment: AlignmentDirectional.center,
-            children: [
-              Container(
-                color: Colors.green,
-                width: 100.0,
-                height: 100.0,
-              ),
-              Container(
-                color: Colors.white,
-                width: 50.0,
-                height: 50.0,
-              ),
-            ],
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text(
+            'Tarefas',
           ),
-          Stack(
-            alignment: AlignmentDirectional.center,
+        ),
+        body: Container(
+          color: Colors.grey,
+          alignment: AlignmentDirectional.topCenter,
+          child: Stack(
             children: [
               Container(
-                color: Colors.white,
-                width: 100.0,
-                height: 100.0,
-              ),
-              Container(
-                color: Colors.green,
-                width: 50.0,
-                height: 50.0,
-              ),
-            ],
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Container(
+                margin: EdgeInsetsDirectional.all(10.0),
+                width: 400,
+                height: 140,
                 color: Colors.blue,
-                width: 100.0,
-                height: 50.0,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [Container(child: Text('Nível: 12'))],
+                ),
               ),
               Container(
-                color: Colors.green,
-                width: 100.0,
-                height: 50.0,
-              ),
-              Container(
-                color: Colors.red,
-                width: 100.0,
-                height: 50.0,
-              ),
+                margin: EdgeInsetsDirectional.all(10.0),
+                width: 400,
+                height: 100,
+                color: Colors.white,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(
+                      width: 72,
+                      height: 100,
+                      color: Colors.black26,
+                    ),
+                    Text('Aprender Flutter'),
+                    ElevatedButton(
+                        onPressed: () {}, child: Icon(Icons.arrow_drop_up))
+                  ],
+                ),
+              )
             ],
           ),
-        ],
+        ),
+        floatingActionButton: FloatingActionButton(onPressed: () {}),
       ),
     );
   }
