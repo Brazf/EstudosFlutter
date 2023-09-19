@@ -26,15 +26,8 @@ class MyApp extends StatelessWidget {
           child: Stack(
             children: [
               Container(
-                margin: EdgeInsetsDirectional.all(10.0),
-                width: 400,
                 height: 140,
                 color: Colors.blue,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  crossAxisAlignment: CrossAxisAlignment.end,
-                  children: [Container(child: Text('Nível: 12'))],
-                ),
               ),
               Container(
                 margin: EdgeInsetsDirectional.all(10.0),
@@ -63,3 +56,13 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+class Task extends StatelessWidget {
+  const Task({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Placeholder();
+  }
+}
+
