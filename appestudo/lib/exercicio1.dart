@@ -5,34 +5,59 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "Exercicio1",
       theme: ThemeData(primarySwatch: Colors.green),
-      home: Scaffold(
-        body: Container(
-            alignment: AlignmentDirectional.center,
-            child: Text('Olá, Mundo',
-                style: TextStyle(
-                  fontSize: 25.0,
-                ))
-        ),
-        floatingActionButton: FloatingActionButton(onPressed: Mensagem1, child: Text("Clique para mudar o Texto!")),
-      ),
+      home: MyHomePage(),
     );
   }
 }
 
-class Mensagem1 extends StatelessWidget {
-  const Mensagem1({super.key});
+class MyHomePage extends StatefulWidget {
+  MyHomePage({Key? key}) : super(key: key);
+
+  @override
+  _MyHomePageState createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  bool textoModificado = false;
+
+  void alternarTexto() {
+    setState(() {
+      textoModificado = !textoModificado;
+    });
+  }
+
+  String getTexto() {
+    return textoModificado ? 'Vou ficar rico!' : 'Vou ficar pobre!';
+  }
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Text('Opa!'),
+    return Scaffold(
+      body: Container(
+        alignment: AlignmentDirectional.center,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              getTexto(),
+              style: TextStyle(
+                fontSize: 25.0,
+              ),
+            ),
+            ElevatedButton(
+              onPressed: alternarTexto,
+              child: Text("Clique para alternar o Texto!"),
+            )
+          ],
+        ),
+      ),
     );
   }
 }
